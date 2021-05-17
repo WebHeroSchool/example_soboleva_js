@@ -88,15 +88,16 @@ body {
 
 .game-page {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
 .game-page__line {
   margin: 12px auto;
-  display: flex;
+  display:flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -123,15 +124,15 @@ body {
 
 .game-page__back:hover {
   filter: drop-shadow(10px 10px 15px rgba(0, 0, 0, 0.5));
-  transition: transform 1s linear;
+  transition:transform 1s linear;
   transform: rotate(-3.08deg);
 }
 
-.card__pic, .card__rezult {
+.card__pic, .rezult {
   width: 218px;
   height: 341px;
 }
 
-.front__game {
+.game-page__front {
   transform: rotateY(180deg);
 }
