@@ -58,7 +58,7 @@ let gameCards = () => {
 
 let getBackCard = () => {
   let back = document.createElement('div');
-  back.classlist.toggle('game-page__back');
+  back.classList.toggle('game-page__back');
   card.append(back);
   return back;
 }
@@ -67,7 +67,7 @@ let getBackCardImg = () => {
   let backImg = document.createElement('img');
   backImg.src = 'img/back.png';
   getBackCard().append(backImg);
-  backImg.classlist.toggle('card__pic');
+  backImg.classList.toggle('card__pic');
   return backImg;
 }
 
@@ -82,25 +82,33 @@ let getFrontCardImg = () => {
   let frontImg = document.createElement ('img');
   let cardRezult = getRandomInt(2);
   (cardRezult === 0) ? frontImg.src = 'img/gameOver.png':
-  frontImg.scr = 'img/cardBug.png';
+  frontImg.src = 'img/Bug.png';
   getFrontCard().append(frontImg);
-  frontImg.classList.toggle('card__rezult');
+  frontImg.classList.toggle('rezult');
   return frontImg;
 }
 
 let getEasy = () => {
-  if (window.innerWidth <= 375) {
-    for (let k = 0; k < 3; k++) {
-      createLine();
-      gameCards();
-  }
-  } else {
     createLine();
     for (let i = 0; i < 3; i++) {
       gameCards();
     }
-  }
 };
+
+let getNormal = () => {
+      for (let k = 0; k < 2; k++) {
+        getEasy();
+      }
+    };
+
+let getHard = () => {
+      for (let k = 0; k < 2; k++) {
+          createLine();
+          for (let i = 0; i < 5; i++) {
+            gameCards();
+          }
+        }
+      };
 
 let getRandomInt = (max) => {
   return Math.floor(Math.random() * Math.floor(max));
