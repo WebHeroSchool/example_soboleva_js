@@ -1,20 +1,20 @@
 let section = document.getElementById('container');
 let title = document.getElementById('header');
-let difficulty = document.getElementsByClassName('level__start');
+let difficulty = document.getElementsByClassName('choice__level');
 let card, choice, line;
 for (let e of difficulty) {
   e.addEventListener('click', levelDifficulty => {
     if (choice) {
-      choice.classList.toggle('choicen__start');
+      choice.classList.toggle('choice__rect');
     };
     choice = levelDifficulty.target;
-    choice.classList.toggle('choicen__start');
+    choice.classList.toggle('choice__rect');
   });
 }
 
 let btn = document.getElementById('button');
 btn.addEventListener('click', start => {
-  choice.classList.toggle('choicen__start');
+  choice.classList.toggle('choice__rect');
 goAndAgain();
 document.body.classList.toggle('game-page');
 (choice.id === 'easy') ? getEasy():
