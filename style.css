@@ -142,23 +142,58 @@ body {
   transform: rotateY(180deg);
 }
 
-@media (max-width: 1374px) {
+@media (max-width: 1635px) {
   .choice::before {
+    left: 630.33px;
+  }
+
+  .choice::after {
+    left: 830.33px;
+  }
+
+  .game-page__img, .card__pic, .rezult {
+    width: 150px;
+    height: 230px;
+}
+
+@media (max-width: 1374px) {
+  .header__title{
+    font-size: 45px;
+    font-weight: bold;
+    margin: 35px 0px 0px 105px;
+  }
+
+  .header__text{
+   font-size: 15px;
+   margin: 5px 0px 0px 105px;
+  }
+
+  .button__start{
+    margin-top: 35px;
+  }
+
+  .choice__level{
+    font-size: 40px;
+  }
+
+  .choice::before {
+    top: 384px;
     left: 700.33px;
-    width: 190px;
-    height: 295px;
+    width: 170px;
+    height: 265px;
     background-size: cover;
   }
 
   .choice::after {
-    left: 885.33px;
-    width: 190px;
-    height: 295px;
+    top: 384px;
+    left: 855.33px;
+    width: 165px;
+    height: 265px;
     background-size: cover;
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1165px) {
   .choice::before {
     left: 615.33px;
     width: 160px;
@@ -176,7 +211,8 @@ body {
     height: 230px;
 }
 
-@media (max-width: 768px) {
+
+@media (max-width: 1075px) {
   .header__title {
     font-weight: bold;
     font-size: 30px;
@@ -221,16 +257,22 @@ body {
     height: 200px;
   }
 }
+@media (max-width: 976px){
+  .header__text {
+    display: none;
+  }
+
+  .game-page__img, .card__pic, .rezult {
+    width: 90px;
+    height: 145px;
+}
+
 
 @media (max-width: 375px) {
   .header__title {
     font-size: 25px;
   }
-  .header__text {
-    display: none;
-  }
-
-  .choice__level {
+    .choice__level {
     margin: auto;
     line-height: 45px;
   }
@@ -238,11 +280,6 @@ body {
   .game-page__line {
     margin: 5px auto;
   }
-
-  .game-page__img, .card__pic, .rezult {
-    width: 100px;
-    height: 160px;
-}
 
   .button__start {
     margin-left: 50px;
