@@ -89,26 +89,51 @@ let getFrontCardImg = () => {
 }
 
 let getEasy = () => {
+  if (window.innerWidth <= 375) {
+    for (let k = 0; k < 3; k++) {
+      createLine();
+      gameCards();
+  }
+  } else {
     createLine();
     for (let i = 0; i < 3; i++) {
       gameCards();
     }
+  }
 };
 
 let getNormal = () => {
-      for (let k = 0; k < 2; k++) {
-        getEasy();
+  if (window.innerWidth <= 375) {
+    for (let k = 0; k < 3; k++) {
+      createLine();
+      for (let i = 0; i < 2; i++) {
+        gameCards();
       }
-    };
+    }
+  } else {
+    for (let k = 0; k < 2; k++) {
+      getEasy();
+    }
+  }
+};
 
 let getHard = () => {
-      for (let k = 0; k < 2; k++) {
-          createLine();
-          for (let i = 0; i < 5; i++) {
-            gameCards();
-          }
-        }
-      };
+  if (window.innerWidth <= 375) {
+    for (let k = 0; k < 5; k++) {
+      createLine();
+      for (let i = 0; i < 2; i++) {
+        gameCards();
+      }
+    }
+  } else {
+    for (let k = 0; k < 2; k++) {
+      createLine();
+      for (let i = 0; i < 5; i++) {
+        gameCards();
+      }
+    }
+  }
+};
 
 let getRandomInt = (max) => {
   return Math.floor(Math.random() * Math.floor(max));
